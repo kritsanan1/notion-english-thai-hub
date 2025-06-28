@@ -1,13 +1,12 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { useAuth } from '@/hooks/useAuth';
 import RegistrationModal from './RegistrationModal';
-
 const HeroSection = () => {
   const [showRegistrationModal, setShowRegistrationModal] = useState(false);
-  const { user } = useAuth();
-
+  const {
+    user
+  } = useAuth();
   const handleCTAClick = () => {
     if (user) {
       // Redirect to courses page or dashboard
@@ -16,9 +15,7 @@ const HeroSection = () => {
       setShowRegistrationModal(true);
     }
   };
-
-  return (
-    <>
+  return <>
       <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-hero to-light px-4 py-16">
         <div className="container mx-auto max-w-6xl text-center animate-fade-in">
           <div className="max-w-4xl mx-auto">
@@ -29,9 +26,7 @@ const HeroSection = () => {
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-sarabun leading-tight">
-              เรียนภาษาอังกฤษง่ายๆ กับเรา!
-            </h1>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-sarabun leading-tight">เรียนภาษาอังกฤษง่ายๆ กับครูจอย</h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 font-sarabun max-w-2xl mx-auto leading-relaxed">
               คอร์สออนไลน์ที่ออกแบบสำหรับคุณ
             </p>
@@ -41,23 +36,13 @@ const HeroSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button 
-                onClick={handleCTAClick}
-                className="bg-cta hover:bg-cta/90 text-white font-sarabun font-semibold text-lg px-8 py-6 h-12 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-                aria-label="Sign up for free English courses"
-              >
+              <Button onClick={handleCTAClick} className="bg-cta hover:bg-cta/90 text-white font-sarabun font-semibold text-lg px-8 py-6 h-12 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl" aria-label="Sign up for free English courses">
                 {user ? 'เข้าสู่คอร์สเรียน' : 'สมัครฟรี'}
               </Button>
               
-              {!user && (
-                <Button 
-                  variant="outline"
-                  className="border-white text-white hover:bg-white/10 font-sarabun font-semibold text-lg px-8 py-6 h-12 rounded-lg transform hover:scale-105 transition-all duration-200"
-                  onClick={() => window.location.href = '/auth'}
-                >
+              {!user && <Button variant="outline" className="border-white text-white hover:bg-white/10 font-sarabun font-semibold text-lg px-8 py-6 h-12 rounded-lg transform hover:scale-105 transition-all duration-200" onClick={() => window.location.href = '/auth'}>
                   เข้าสู่ระบบ
-                </Button>
-              )}
+                </Button>}
             </div>
             
             {/* Floating elements for visual interest */}
@@ -69,9 +54,7 @@ const HeroSection = () => {
                   Join over <span className="font-bold text-cta">10,000+</span> students who have improved their English with us
                 </p>
                 <div className="flex justify-center mt-4 space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-yellow-400 text-xl">⭐</span>
-                  ))}
+                  {[...Array(5)].map((_, i) => <span key={i} className="text-yellow-400 text-xl">⭐</span>)}
                   <span className="text-white/80 font-sarabun ml-2">4.8/5 คะแนน</span>
                 </div>
               </div>
@@ -80,12 +63,7 @@ const HeroSection = () => {
         </div>
       </section>
 
-      <RegistrationModal 
-        isOpen={showRegistrationModal} 
-        onClose={() => setShowRegistrationModal(false)} 
-      />
-    </>
-  );
+      <RegistrationModal isOpen={showRegistrationModal} onClose={() => setShowRegistrationModal(false)} />
+    </>;
 };
-
 export default HeroSection;
