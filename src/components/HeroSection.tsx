@@ -50,12 +50,12 @@ const HeroSection = () => {
               <div className="absolute -top-4 -left-4 w-20 h-20 bg-white/10 rounded-full animate-pulse hidden md:block"></div>
               <div className="absolute -top-8 -right-8 w-16 h-16 bg-white/20 rounded-full animate-pulse delay-200 hidden lg:block"></div>
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-2xl mx-auto">
-                <p className="text-white font-poppins text-sm md:text-base">
+                <p className="font-poppins text-sm md:text-base text-slate-950">
                   Join over <span className="font-bold text-cta">10,000+</span> students who have improved their English with us
                 </p>
                 <div className="flex justify-center mt-4 space-x-1">
                   {[...Array(5)].map((_, i) => <span key={i} className="text-yellow-400 text-xl">⭐</span>)}
-                  <span className="text-white/80 font-sarabun ml-2">4.8/5 คะแนน</span>
+                  <span className="font-sarabun ml-2 text-slate-950">4.8/5 คะแนน</span>
                 </div>
               </div>
             </div>
