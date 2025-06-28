@@ -26,7 +26,7 @@ const HeroSection = () => {
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-sarabun leading-tight">เรียนภาษาอังกฤษง่ายๆ กับครูจอย</h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-sarabun leading-tight lg:text-8xl">เรียนภาษาอังกฤษง่ายๆกับครูจอย</h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 font-sarabun max-w-2xl mx-auto leading-relaxed">
               คอร์สออนไลน์ที่ออกแบบสำหรับคุณ
             </p>
