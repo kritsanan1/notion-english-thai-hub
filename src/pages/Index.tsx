@@ -1,8 +1,9 @@
-
 import React, { useEffect } from 'react';
+import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import CourseHighlights from '@/components/CourseHighlights';
 import TestimonialsSection from '@/components/TestimonialsSection';
+import ContactCTA from '@/components/ContactCTA';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -30,19 +31,22 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-light">
+    <div className="min-h-screen bg-white">
       {/* Skip to main content for accessibility */}
       <a 
         href="#main-content" 
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-hero text-white px-4 py-2 rounded-lg z-50"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-teal-600 text-white px-4 py-2 rounded-lg z-50"
       >
         ข้ามไปยังเนื้อหาหลัก
       </a>
+      
+      <Navbar />
       
       <main id="main-content">
         <HeroSection />
         <CourseHighlights />
         <TestimonialsSection />
+        <ContactCTA />
       </main>
       
       <Footer />
