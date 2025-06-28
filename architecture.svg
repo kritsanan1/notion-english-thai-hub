@@ -1,0 +1,177 @@
+<svg width="1200" height="1000" viewBox="0 0 1200 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <style>
+        .node-rect { fill: #e0f2f7; stroke: #007bb5; stroke-width: 2; rx: 8; ry: 8; }
+        .node-text { font-family: sans-serif; font-size: 16px; fill: #333; text-anchor: middle; dominant-baseline: central; }
+        .group-rect { fill: #f0f8ff; stroke: #a7d9f2; stroke-width: 1; rx: 12; ry: 12; }
+        .group-label { font-family: sans-serif; font-size: 20px; font-weight: bold; fill: #005f8c; }
+        .arrow { stroke: #007bb5; stroke-width: 2; marker-end: url(#arrowhead); }
+        .data-flow-text { font-family: sans-serif; font-size: 14px; fill: #007bb5; }
+        .third-party-rect { fill: #fff3e0; stroke: #ff9800; stroke-width: 2; rx: 8; ry: 8; }
+        .third-party-text { font-family: sans-serif; font-size: 16px; fill: #e65100; text-anchor: middle; dominant-baseline: central; }
+        .auth-flow-text { font-family: sans-serif; font-size: 14px; fill: #8e24aa; }
+        .auth-arrow { stroke: #8e24aa; stroke-width: 2; marker-end: url(#arrowhead-auth); }
+      </style>
+      <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#007bb5" />
+        </marker>
+        <marker id="arrowhead-auth" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#8e24aa" />
+        </marker>
+      </defs>
+
+      <!-- Frontend Group -->
+      <rect x="50" y="50" width="500" height="700" class="group-rect" />
+      <text x="300" y="80" class="group-label">Frontend (React App)</text>
+
+      <rect x="100" y="120" width="150" height="50" class="node-rect" />
+      <text x="175" y="145" class="node-text">App.tsx</text>
+
+      <rect x="100" y="190" width="150" height="50" class="node-rect" />
+      <text x="175" y="215" class="node-text">Index Page</text>
+
+      <rect x="100" y="260" width="150" height="50" class="node-rect" />
+      <text x="175" y="285" class="node-text">Auth Page</text>
+
+      <rect x="100" y="330" width="150" height="50" class="node-rect" />
+      <text x="175" y="355" class="node-text">NotFound Page</text>
+
+      <rect x="300" y="120" width="200" height="50" class="node-rect" />
+      <text x="400" y="145" class="node-text">HeroSection</text>
+
+      <rect x="300" y="190" width="200" height="50" class="node-rect" />
+      <text x="400" y="215" class="node-text">CourseHighlights</text>
+
+      <rect x="300" y="260" width="200" height="50" class="node-rect" />
+      <text x="400" y="285" class="node-text">TestimonialsSection</text>
+
+      <rect x="300" y="330" width="200" height="50" class="node-rect" />
+      <text x="400" y="355" class="node-text">Footer</text>
+
+      <rect x="300" y="400" width="200" height="50" class="node-rect" />
+      <text x="400" y="425" class="node-text">CoursePreviewModal</text>
+
+      <rect x="300" y="470" width="200" height="50" class="node-rect" />
+      <text x="400" y="495" class="node-text">RegistrationModal</text>
+
+      <rect x="300" y="540" width="200" height="50" class="node-rect" />
+      <text x="400" y="565" class="node-text">PDPAConsent</text>
+
+      <rect x="300" y="610" width="200" height="50" class="node-rect" />
+      <text x="400" y="635" class="node-text">Shadcn UI Components</text>
+
+      <rect x="100" y="680" width="150" height="50" class="node-rect" />
+      <text x="175" y="705" class="node-text">useAuth Hook</text>
+
+      <rect x="300" y="680" width="200" height="50" class="node-rect" />
+      <text x="400" y="705" class="node-text">useToast Hook</text>
+
+      <!-- Backend/Database Group -->
+      <rect x="600" y="50" width="550" height="700" class="group-rect" />
+      <text x="875" y="80" class="group-label">Backend (Supabase)</text>
+
+      <rect x="650" y="120" width="200" height="50" class="node-rect" />
+      <text x="750" y="145" class="node-text">Supabase Client</text>
+
+      <rect x="650" y="190" width="200" height="50" class="node-rect" />
+      <text x="750" y="215" class="node-text">Supabase Auth</text>
+
+      <rect x="650" y="260" width="200" height="50" class="node-rect" />
+      <text x="750" y="285" class="node-text">Supabase Database</text>
+
+      <rect x="900" y="190" width="200" height="50" class="node-rect" />
+      <text x="1000" y="215" class="node-text">Auth.users Table</text>
+
+      <rect x="900" y="260" width="200" height="50" class="node-rect" />
+      <text x="1000" y="285" class="node-text">courses Table</text>
+
+      <rect x="900" y="330" width="200" height="50" class="node-rect" />
+      <text x="1000" y="355" class="node-text">testimonials Table</text>
+
+      <rect x="900" y="400" width="200" height="50" class="node-rect" />
+      <text x="1000" y="425" class="node-text">user_inquiries Table</text>
+
+      <rect x="900" y="470" width="200" height="50" class="node-rect" />
+      <text x="1000" y="495" class="node-text">profiles Table</text>
+
+      <rect x="900" y="540" width="200" height="50" class="node-rect" />
+      <text x="1000" y="565" class="node-text">privacy_consents Table</text>
+
+      <rect x="900" y="610" width="200" height="50" class="node-rect" />
+      <text x="1000" y="635" class="node-text">orders Table</text>
+
+      <rect x="900" y="680" width="200" height="50" class="node-rect" />
+      <text x="1000" y="705" class="node-text">feedback Table</text>
+
+      <!-- Third-Party Integrations Group -->
+      <rect x="50" y="800" width="1100" height="150" class="group-rect" />
+      <text x="600" y="830" class="group-label">Third-Party Integrations</text>
+
+      <rect x="100" y="870" width="150" height="50" class="third-party-rect" />
+      <text x="175" y="895" class="third-party-text">Google Fonts</text>
+
+      <rect x="300" y="870" width="150" height="50" class="third-party-rect" />
+      <text x="375" y="895" class="third-party-text">Unsplash/Pexels</text>
+
+      <rect x="500" y="870" width="150" height="50" class="third-party-rect" />
+      <text x="575" y="895" class="third-party-text">Stripe (Planned)</text>
+
+      <!-- Data Flow -->
+      <line x1="250" y1="145" x2="650" y2="145" class="arrow" />
+      <text x="450" y="135" class="data-flow-text">Data Fetch/Submit</text>
+
+      <line x1="250" y1="215" x2="650" y2="215" class="arrow" />
+      <text x="450" y="205" class="data-flow-text">Course Data</text>
+
+      <line x1="250" y1="285" x2="650" y2="285" class="arrow" />
+      <text x="450" y="275" class="data-flow-text">Testimonial Data</text>
+
+      <line x1="250" y1="495" x2="650" y2="495" class="arrow" />
+      <text x="450" y="485" class="data-flow-text">Inquiry Data</text>
+
+      <line x1="250" y1="565" x2="650" y2="565" class="arrow" />
+      <text x="450" y="555" class="data-flow-text">Consent Data</text>
+
+      <!-- Authentication Flow -->
+      <line x1="250" y1="285" x2="650" y2="215" class="auth-arrow" />
+      <text x="450" y="250" class="auth-flow-text">Sign In/Up</text>
+
+      <line x1="650" y1="215" x2="250" y2="705" class="auth-arrow" />
+      <text x="450" y="650" class="auth-flow-text">Auth State</text>
+
+      <!-- Frontend Internal Dependencies -->
+      <line x1="175" y1="170" x2="175" y2="190" class="arrow" />
+      <line x1="175" y1="240" x2="175" y2="260" class="arrow" />
+      <line x1="175" y1="310" x2="175" y2="330" class="arrow" />
+      <line x1="250" y1="145" x2="300" y2="145" class="arrow" />
+      <line x1="250" y1="215" x2="300" y2="215" class="arrow" />
+      <line x1="250" y1="285" x2="300" y2="285" class="arrow" />
+      <line x1="250" y1="355" x2="300" y2="355" class="arrow" />
+      <line x1="250" y1="425" x2="300" y2="425" class="arrow" />
+      <line x1="250" y1="495" x2="300" y2="495" class="arrow" />
+      <line x1="250" y1="565" x2="300" y2="565" class="arrow" />
+      <line x1="250" y1="635" x2="300" y2="635" class="arrow" />
+      <line x1="250" y1="705" x2="300" y2="705" class="arrow" />
+
+      <!-- Supabase Internal Dependencies -->
+      <line x1="850" y1="145" x2="900" y2="145" class="arrow" />
+      <line x1="850" y1="215" x2="900" y2="215" class="arrow" />
+      <line x1="850" y1="285" x2="900" y2="285" class="arrow" />
+      <line x1="850" y1="355" x2="900" y2="355" class="arrow" />
+      <line x1="850" y1="425" x2="900" y2="425" class="arrow" />
+      <line x1="850" y1="495" x2="900" y2="495" class="arrow" />
+      <line x1="850" y1="565" x2="900" y2="565" class="arrow" />
+      <line x1="850" y1="635" x2="900" y2="635" class="arrow" />
+      <line x1="850" y1="705" x2="900" y2="705" class="arrow" />
+
+      <!-- Frontend to Third-Party -->
+      <line x1="175" y1="750" x2="175" y2="870" class="arrow" />
+      <text x="185" y="800" class="data-flow-text">Font Loading</text>
+
+      <line x1="400" y1="750" x2="375" y2="870" class="arrow" />
+      <text x="385" y="800" class="data-flow-text">Image Assets</text>
+
+      <line x1="400" y1="750" x2="575" y2="870" class="arrow" />
+      <text x="485" y="800" class="data-flow-text">Payment Integration</text>
+
+    </svg>

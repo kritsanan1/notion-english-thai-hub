@@ -1,73 +1,113 @@
-# Welcome to your Lovable project
+# English Learning Platform
 
-## Project info
+    Welcome to the English Learning Platform, an online course platform designed specifically for young Thai adults. This project aims to provide an effective and enjoyable learning experience for English language acquisition.
 
-**URL**: https://lovable.dev/projects/d9c302ea-21f7-41dc-abca-171ec2d38146
+    ## Project Info
 
-## How can I edit this code?
+    **URL**: https://lovable.dev/projects/d9c302ea-21f7-41dc-abca-171ec2d38146
 
-There are several ways of editing your application.
+    ## Technologies Used
 
-**Use Lovable**
+    This project is built with a modern web development stack:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d9c302ea-21f7-41dc-abca-171ec2d38146) and start prompting.
+    -   **Vite**: A fast build tool and development server for modern web projects.
+    -   **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript, enhancing code quality and maintainability.
+    -   **React**: A JavaScript library for building user interfaces.
+    -   **shadcn/ui**: A collection of reusable components built using Radix UI and Tailwind CSS.
+    -   **Tailwind CSS**: A utility-first CSS framework for rapidly building custom designs.
+    -   **Supabase**: An open-source Firebase alternative providing a PostgreSQL database, authentication, and more.
 
-Changes made via Lovable will be committed automatically to this repo.
+    ## Prerequisites
 
-**Use your preferred IDE**
+    Before you begin, ensure you have the following installed:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+    -   **Node.js**: Version 18 or higher. We recommend using [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) (Node Version Manager) to manage Node.js versions.
+    -   **npm**: Node Package Manager, which comes with Node.js.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+    ## Installation
 
-Follow these steps:
+    Follow these steps to get the project up and running on your local machine:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+    1.  **Clone the repository**:
+        ```sh
+        git clone <YOUR_GIT_URL>
+        ```
+        Replace `<YOUR_GIT_URL>` with the actual Git URL of your project.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+    2.  **Navigate to the project directory**:
+        ```sh
+        cd <YOUR_PROJECT_NAME>
+        ```
+        Replace `<YOUR_PROJECT_NAME>` with the name of the cloned directory.
 
-# Step 3: Install the necessary dependencies.
-npm i
+    3.  **Install dependencies**:
+        ```sh
+        npm install
+        ```
+        This command will install all the necessary packages listed in `package.json`.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+    ## Environment Configuration
 
-**Edit a file directly in GitHub**
+    This project uses Supabase for its backend services (database and authentication). You will need to configure your Supabase project details.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+    1.  **Create a `.env` file**: In the root of your project, create a file named `.env`.
+    2.  **Add Supabase credentials**: Add the following environment variables to your `.env` file:
+        ```
+        VITE_SUPABASE_URL="YOUR_SUPABASE_PROJECT_URL"
+        VITE_SUPABASE_ANON_KEY="YOUR_SUPABASE_ANON_KEY"
+        ```
+        You can find these values in your Supabase project settings under `API`.
 
-**Use GitHub Codespaces**
+    ## Local Development Setup
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+    To start the development server with auto-reloading and an instant preview:
 
-## What technologies are used for this project?
+    ```sh
+    npm run dev
+    ```
+    This will typically start the application on `http://localhost:8080` (or another available port). The application will automatically reload when you make changes to the source code.
 
-This project is built with:
+    ## Testing Procedures
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+    Currently, there are no dedicated unit or integration tests configured for this project.
+    -   **Manual Testing**: Verify functionality by interacting with the application in the browser.
+    -   **Linting**: Run `npm run lint` to check for code style and potential errors.
 
-## How can I deploy this project?
+    ## Deployment Process
 
-Simply open [Lovable](https://lovable.dev/projects/d9c302ea-21f7-41dc-abca-171ec2d38146) and click on Share -> Publish.
+    This project can be easily deployed using Lovable's built-in publishing features or through platforms like Netlify.
 
-## Can I connect a custom domain to my Lovable project?
+    -   **Using Lovable**:
+        1.  Open your project in [Lovable](https://lovable.dev/projects/d9c302ea-21f7-41dc-abca-171ec2d38146).
+        2.  Click on `Share` -> `Publish`.
 
-Yes, you can!
+    -   **Using Netlify (or similar static site hosts)**:
+        1.  Build the project for production:
+            ```sh
+            npm run build
+            ```
+            This will create a `dist` directory with optimized production-ready files.
+        2.  Deploy the contents of the `dist` directory to your preferred static hosting provider.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+    ## Custom Domain
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+    To connect a custom domain to your Lovable project:
+
+    1.  Navigate to `Project` > `Settings` > `Domains`.
+    2.  Click `Connect Domain`.
+    3.  Refer to the [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide) documentation for detailed instructions.
+
+    ## Contribution Guidelines
+
+    We welcome contributions to this project! If you'd like to contribute, please follow these steps:
+
+    1.  Fork the repository.
+    2.  Create a new branch for your feature or bug fix: `git checkout -b feature/your-feature-name` or `bugfix/fix-description`.
+    3.  Make your changes and ensure they adhere to the existing code style (run `npm run lint`).
+    4.  Commit your changes with a clear and descriptive commit message.
+    5.  Push your branch to your forked repository.
+    6.  Open a pull request to the `main` branch of the original repository.
+
+    ## License
+
+    This project is open-source and available under the [MIT License](https://opensource.org/licenses/MIT).

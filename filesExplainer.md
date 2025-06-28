@@ -1,0 +1,99 @@
+# Project File Structure Explanation
+
+    This document provides a detailed explanation of the project's file structure, including the purpose, importance, and relationships of each file.
+
+    ## Directory Structure
+
+    - `components.json`: Configuration for shadcn/ui components. Defines paths and base color. 🟢 High.
+    - `eslint.config.js`: ESLint configuration for code linting. Enforces code style and best practices. 🟡 Medium.
+    - `index.html`: Main HTML file. The entry point for the web application, defines metadata and links fonts. 🟢 High.
+    - `package.json`: Project dependencies and scripts. Manages all external libraries and defines development/build commands. 🟢 High.
+    - `postcss.config.js`: PostCSS configuration. Configures CSS processing, including Tailwind CSS and Autoprefixer. 🟡 Medium.
+    - `public/`: Contains static assets.
+      - `public/robots.txt`: Robots exclusion standard file. Directs web crawlers on which pages to index or ignore. 🔴 Low.
+    - `README.md`: Project README. Provides an overview, setup instructions, and general project information. 🟡 Medium.
+    - `src/`: Contains all source code for the React application.
+      - `src/App.css`: Global CSS for the React app. Contains basic styling for the root element and general layout. 🟡 Medium.
+      - `src/App.tsx`: Main React application component. Sets up context providers (React Query, Auth, Tooltip), defines main application routes, and renders core components. 🟢 High.
+      - `src/components/`: Reusable React components.
+        - `src/components/CourseHighlights.tsx`: Displays highlighted courses. Fetches and renders a selection of courses from Supabase, including interactive elements. 🟢 High.
+        - `src/components/CoursePreviewModal.tsx`: Modal for course details. Shows detailed information for a selected course and handles enrollment actions. 🟢 High.
+        - `src/components/Footer.tsx`: Application footer. Contains navigation links, contact information, and social media links. 🟡 Medium.
+        - `src/components/HeroSection.tsx`: Hero section of the landing page. Displays the main call to action, introductory text, and handles the registration modal. 🟢 High.
+        - `src/components/PDPAConsent.tsx`: PDPA consent modal. Manages user consent for data privacy, storing preferences in local storage. 🟢 High.
+        - `src/components/RegistrationModal.tsx`: User registration modal. Collects user inquiry data and submits it to Supabase. 🟢 High.
+        - `src/components/TestimonialsSection.tsx`: Displays user testimonials. Fetches and presents featured testimonials from Supabase, building trust. 🟢 High.
+        - `src/components/ui/`: Shadcn/ui components. Reusable UI components built on Radix UI and styled with Tailwind CSS. These form the visual building blocks of the application. 🟢 High.
+          - `src/components/ui/accordion.tsx`: Shadcn UI Accordion component. 🟢 High.
+          - `src/components/ui/alert-dialog.tsx`: Shadcn UI Alert Dialog component. 🟢 High.
+          - `src/components/ui/alert.tsx`: Shadcn UI Alert component. 🟢 High.
+          - `src/components/ui/aspect-ratio.tsx`: Shadcn UI Aspect Ratio component. 🟢 High.
+          - `src/components/ui/avatar.tsx`: Shadcn UI Avatar component. 🟢 High.
+          - `src/components/ui/badge.tsx`: Shadcn UI Badge component. 🟢 High.
+          - `src/components/ui/breadcrumb.tsx`: Shadcn UI Breadcrumb component. 🟢 High.
+          - `src/components/ui/button.tsx`: Shadcn UI Button component. 🟢 High.
+          - `src/components/ui/calendar.tsx`: Shadcn UI Calendar component. 🟢 High.
+          - `src/components/ui/card.tsx`: Shadcn UI Card component. 🟢 High.
+          - `src/components/ui/carousel.tsx`: Shadcn UI Carousel component. 🟢 High.
+          - `src/components/ui/chart.tsx`: Shadcn UI Chart component. 🟢 High.
+          - `src/components/ui/checkbox.tsx`: Shadcn UI Checkbox component. 🟢 High.
+          - `src/components/ui/collapsible.tsx`: Shadcn UI Collapsible component. 🟢 High.
+          - `src/components/ui/command.tsx`: Shadcn UI Command component. 🟢 High.
+          - `src/components/ui/context-menu.tsx`: Shadcn UI Context Menu component. 🟢 High.
+          - `src/components/ui/dialog.tsx`: Shadcn UI Dialog component. 🟢 High.
+          - `src/components/ui/drawer.tsx`: Shadcn UI Drawer component. 🟢 High.
+          - `src/components/ui/dropdown-menu.tsx`: Shadcn UI Dropdown Menu component. 🟢 High.
+          - `src/components/ui/form.tsx`: Shadcn UI Form component. 🟢 High.
+          - `src/components/ui/hover-card.tsx`: Shadcn UI Hover Card component. 🟢 High.
+          - `src/components/ui/input-otp.tsx`: Shadcn UI Input OTP component. 🟢 High.
+          - `src/components/ui/input.tsx`: Shadcn UI Input component. 🟢 High.
+          - `src/components/ui/label.tsx`: Shadcn UI Label component. 🟢 High.
+          - `src/components/ui/menubar.tsx`: Shadcn UI Menubar component. 🟢 High.
+          - `src/components/ui/navigation-menu.tsx`: Shadcn UI Navigation Menu component. 🟢 High.
+          - `src/components/ui/pagination.tsx`: Shadcn UI Pagination component. 🟢 High.
+          - `src/components/ui/popover.tsx`: Shadcn UI Popover component. 🟢 High.
+          - `src/components/ui/progress.tsx`: Shadcn UI Progress component. 🟢 High.
+          - `src/components/ui/radio-group.tsx`: Shadcn UI Radio Group component. 🟢 High.
+          - `src/components/ui/resizable.tsx`: Shadcn UI Resizable component. 🟢 High.
+          - `src/components/ui/scroll-area.tsx`: Shadcn UI Scroll Area component. 🟢 High.
+          - `src/components/ui/select.tsx`: Shadcn UI Select component. 🟢 High.
+          - `src/components/ui/separator.tsx`: Shadcn UI Separator component. 🟢 High.
+          - `src/components/ui/sheet.tsx`: Shadcn UI Sheet component. 🟢 High.
+          - `src/components/ui/sidebar.tsx`: Shadcn UI Sidebar component. 🟢 High.
+          - `src/components/ui/skeleton.tsx`: Shadcn UI Skeleton component. 🟢 High.
+          - `src/components/ui/slider.tsx`: Shadcn UI Slider component. 🟢 High.
+          - `src/components/ui/sonner.tsx`: Shadcn UI Sonner component. 🟢 High.
+          - `src/components/ui/switch.tsx`: Shadcn UI Switch component. 🟢 High.
+          - `src/components/ui/table.tsx`: Shadcn UI Table component. 🟢 High.
+          - `src/components/ui/tabs.tsx`: Shadcn UI Tabs component. 🟢 High.
+          - `src/components/ui/textarea.tsx`: Shadcn UI Textarea component. 🟢 High.
+          - `src/components/ui/toaster.tsx`: Shadcn UI Toaster component. 🟢 High.
+          - `src/components/ui/toast.tsx`: Shadcn UI Toast component. 🟢 High.
+          - `src/components/ui/toggle-group.tsx`: Shadcn UI Toggle Group component. 🟢 High.
+          - `src/components/ui/toggle.tsx`: Shadcn UI Toggle component. 🟢 High.
+          - `src/components/ui/tooltip.tsx`: Shadcn UI Tooltip component. 🟢 High.
+          - `src/components/ui/use-toast.ts`: Re-export of `useToast` and `toast`. Provides a convenient way to import toast notification hooks. 🟡 Medium.
+      - `src/hooks/`: Custom React hooks.
+        - `src/hooks/useAuth.tsx`: Authentication context and hooks. Manages user authentication state (sign up, sign in, sign out) and integrates with Supabase Auth. 🟢 High.
+        - `src/hooks/use-mobile.tsx`: Hook to detect mobile devices. Provides a boolean state to enable responsive design adjustments. 🔴 Low.
+        - `src/hooks/use-toast.ts`: Toast notification hook. Manages the state and display logic for transient user notifications. 🟢 High.
+      - `src/integrations/`: Integrations with third-party services.
+        - `src/integrations/supabase/`: Supabase integration files.
+          - `src/integrations/supabase/client.ts`: Supabase client initialization. Sets up the connection to the Supabase project for database and authentication services. 🟢 High.
+          - `src/integrations/supabase/types.ts`: Supabase database types. Auto-generated TypeScript types for the Supabase database schema, ensuring type safety for data operations. 🟢 High.
+      - `src/lib/`: Utility functions.
+        - `src/lib/utils.ts`: Utility functions. Contains helper functions like `cn` for conditional class merging in Tailwind CSS. 🟢 High.
+      - `src/pages/`: Top-level page components for routing.
+        - `src/pages/Auth.tsx`: Authentication page. Provides the user interface for signing in and signing up. 🟢 High.
+        - `src/pages/Index.tsx`: Main landing page. Orchestrates the display of various sections (Hero, Courses, Testimonials) and the Footer, including scroll animations. 🟢 High.
+        - `src/pages/NotFound.tsx`: 404 error page. Displays a message for non-existent routes. 🟡 Medium.
+      - `src/main.tsx`: React application entry point. The root file that renders the main `App` component into the DOM. 🟢 High.
+      - `src/vite-env.d.ts`: Vite environment type definitions. Provides TypeScript type definitions specific to the Vite client environment. 🔴 Low.
+    - `supabase/`: Supabase related configuration and migrations.
+      - `supabase/config.toml`: Supabase CLI configuration. Configures the Supabase CLI with the project ID for local development and deployment. 🟡 Medium.
+      - `supabase/migrations/20250628020400-0883d481-1155-fc5-b6a1-7f0abd34565b.sql`: Supabase database migration. Defines the database schema, including tables, RLS policies, and initial data. 🟢 High.
+    - `tailwind.config.ts`: Tailwind CSS configuration. Customizes Tailwind CSS with project-specific colors, fonts, and animations. 🟢 High.
+    - `tsconfig.app.json`: TypeScript configuration for the application. Specifies compiler options for the client-side React application. 🟢 High.
+    - `tsconfig.json`: Base TypeScript configuration. The root TypeScript configuration file that references other `tsconfig` files. 🟢 High.
+    - `tsconfig.node.json`: TypeScript configuration for Node.js environment. Specifies compiler options for Node.js-specific files, like Vite configuration. 🟢 High.
+    - `vite.config.ts`: Vite build configuration. Configures the Vite development server and build process, including React plugin and path aliases. 🟢 High.
